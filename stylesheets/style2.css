@@ -47,8 +47,10 @@ h2{
 	font-style:normal;
 }
 
+
+
 #header h1, #pixels{
-	color: #48941A;
+	color: #ff0000;
 }
 
 .float-left{
@@ -82,34 +84,47 @@ h2{
 }
 
 #intro{
-	background:url(images/firstBG.jpg) 50% 0 no-repeat fixed;
-	color: white;
+	background:url(../images/nadja.jpg) 50% 0 no-repeat fixed;
+	color: red;
 	height: 600px;
 	margin: 0 auto;
 	padding: 0;
+
+    width: 200px;
+    overflow:hidden;
 }
 
+
+
 #second{
-	background: url(images/secondBG.jpg) 50% 0 no-repeat fixed;
+	background: url(../images/nadja.jpg) 50% 0 no-repeat fixed;
 	color: white;
 	height: 1300px;
 	margin: 0 auto;
 	overflow: hidden;
 	padding: 0;
+
+    left: 210px;
+    overflow-x:hidden;
 }
 
 #second .bg{
-	background: url(images/trainers.png) 50% 0 no-repeat fixed;
+	background: url(../images/kris.jpg) 50% 0 no-repeat fixed;
 	height: 1300px;
 	margin: 0 auto;
 	padding: 0;
 	position: absolute;
 	width: 900px;
 	z-index: 200;
+
+
+	position: absolute;
+    left: 210px;
+    overflow-x:hidden;
 }
 
 #third{
-	background: url(images/thirdBG.jpg) 50% 0 no-repeat fixed;
+	background: url(../images/thirdBG.jpg) 50% 0 no-repeat fixed;
 	color: white;
 	height: 650px;
 	padding: 100px 0 0 0;	
