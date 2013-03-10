@@ -6,26 +6,32 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title> henceworth </title>
-<link href="stylesheets/style3.css" rel="stylesheet" type="text/css" />
+<link href="stylesheets/style3b.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 <script type="text/javascript">
 
-var lastScrollTop = 0;
-i = 0
+  var lastScrollTop = 0;
+  i = 0
 
-$(document).ready(function() {
-    $('#left1').scroll(function() {
-      var st = $(this).scrollTop();
-   if (st > lastScrollTop){
-       i = i + 1
-   } else {
-      i = i - 1
-   }
-   lastScrollTop = st;
-      
-     $('#left2').css({"top": i})
-    });
-});
+  $(document).ready(function() {
+      $('#left1').scroll(function() {
+        var st = $(this).scrollTop();
+     if (st > lastScrollTop){
+         i = i + 1
+     } else {
+        i = i - 1
+     }
+     lastScrollTop = st;
+        
+      // $('#left2').css({"top": i})
+      setRight(i)
+      });
+  });
+
+  setRight = function(i){
+
+    // $('#left2').css({"top": i});
+  }
 
 
 </script>
@@ -74,7 +80,7 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
   qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
   facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
   nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-</p><a href="#2"> footnote 2 </a>
+</p><a href="#2" onclick="setRight(0)"> footnote 2 </a>
 
 
 <p>

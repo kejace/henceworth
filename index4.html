@@ -1,32 +1,302 @@
-<html>
-    <head>
-        <script type="text/javascript">
-            function setupPage() {
-                var agreement = document.getElementById("agreetext");
-                var visibleHeight = agreement.clientHeight;
-                var scrollableHeight = agreement.scrollHeight;
-                if (scrollableHeight > visibleHeight) {
-                    var checkbox = document.getElementById("agreebox");
-                    checkbox.checked=false;
-                    checkbox.disabled=true;
-                    agreement.onscroll = handleScroll;
-                }
-            }
 
-            function handleScroll() {
-                var agreement = document.getElementById("agreetext");
-                var visibleHeight = agreement.clientHeight;
-                var scrollableHeight = agreement.scrollHeight;
-                var position = agreement.scrollTop;
-                if (position + visibleHeight == scrollableHeight) {
-                    document.getElementById("agreebox").disabled=false;
-                }
-            }
-        </script>
-    </head>
-    <body>
-        <form>
-            <textarea id="agreetext" rows="8" cols="40">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+<!-- IE into quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title> henceworth </title>
+<link href="stylesheets/style3.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+  var lastScrollTop = 0;
+  i = 0
+
+  $(document).ready(function() {
+      $('#left1').scroll(function() {
+        var st = $(this).scrollTop();
+     if (st > lastScrollTop){
+         i = i + 1
+     } else {
+        i = i - 1
+     }
+     lastScrollTop = st;
+        
+      // $('#left2').css({"top": i})
+      setRight(i)
+      });
+  });
+
+  setRight = function(i){
+
+     $('#left2').css({"top": i});
+  }
+
+
+</script>
+</head>
+
+<body>
+
+
+
+  <div id="#wrapper">
+    
+
+<div id="left1">
+<div class="inner">
+<h3>Title of paper</h3>
+<p>This one works in IE5.01, IE5.5, IE6, Opera 7.23 Mozilla and Firefox</p>
+<p>NN7 displays correctly but the absolutely positioned div in the content area stays 'fixed' as the content scrolls.</p>
+
+
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p><a href="#1"> footnote 1 </a>
+
+
+
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p><a href="#2" onclick="setRight(0)"> footnote 2 </a>
+
+
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<a href="#3"> footnote 3 </a>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<a href="#4"> footnote 4 </a>
+<p>
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+<a href="#5"> footnote 5</a>
+</div>
+</div>
+
+
+<div id="left2">
+<div class="inner">
+<h3>Notes</h3>
+<p>This one works in IE5.01, IE5.5, IE6, Opera 7.23 Mozilla and Firefox</p>
+<p>NN7 displays correctly but the absolutely positioned div in the content area stays 'fixed' as the content scrolls.</p>
+<p><a href="http://www.cssplay.co.uk/comments/comments.php?comment_id=fixit layout 4" title="Your comments">Comments</a></p>
+
+<a name="1"></a>
+<p>
+
+  FOOTNOTE nr 1
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+
+
+<a name="2"></a>
+<p>
+  
+  FOOTNOTE 2
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+</p>
+<p>
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+</p>
+
+<a name="3"></a>
+<p>
+  FOOTNOTE 3
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+</p>
+
+<a name="4"></a>
+<p>
+  FOOTNOTE 4
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
+  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+
+<a name="5"></a>
+<p>
+  FOOTNOTE 5
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+  euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim
+  ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+  ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit
+  in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
+  facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent
+  luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+  Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
   lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
   dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
   eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
@@ -44,64 +314,17 @@
   eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
   qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
   facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-  lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-  dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-  eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-  qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
-  facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</textarea>
-            <br/><br/>
-            <input type="checkbox" id="agreebox" value="true"/> <label id="agreelabel" for="agreebox">I agree</label>
-            <br/><br/>
-            <input type="submit" value="Continue"/>
-        </form>
-        <script type="text/javascript">
-            // We put this at the end of the page rather than in an document.onload
-            // because the document.onload event doesn't fire until all images have loaded.
-            setupPage();
-        </script>
-    </body>
+  nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+</p>
+
+</div>
+</div>
+
+
+</div> <!-- #wrapper -->
+
+<div id="head">title of paper</div>
+<div id="foot"><br />henceworth.org &copy; 2013</div>
+
+</body>
 </html>
