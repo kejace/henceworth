@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Otmomata-js</title>
+    <script type="text/javascript" src="external/jquery.js"></script>
+    <script type="text/javascript" src="external/jquery.transit.js"></script>
+    <script type="text/javascript" src="js/otomata.constants.js"></script>
+    <script type="text/javascript" src="js/otomata.sound.js"></script>
+    <script type="text/javascript" src="js/otomata.ui.js"></script>
+    <link rel="stylesheet" href="otomata.css" type="text/css">
+</head>
+<body>
+<canvas id="playGround" width="405px" height="405px">Your browser doesn't support canvas elements, sorry.</canvas>
+<div id="playGroundOver"></div>
+<div id="controls">
+    <div>
+        <a id="start" href="#">Start</a> /
+        <a id="clear" href="#">Clear</a> /
+        <a id="scale" href="#">Simple Scale</a>
+    </div>
+    <div>Scale:
+        <select id="scales">
+        </select>
+    </div>
+    <div>Octave:
+        <select id="octaves">
+        </select>
+    </div>
+    <textarea id="formula" rows="20" cols="50">
+var samplesLength = Otomata.sampleRate; // one second
+var samples = new Array(samplesLength);
+for (var i = 0; i < samplesLength; i++) {
+    var t = i / samplesLength; // time from 0 to 1
+    var w = 2 * PI * frequency * t;
+    var v = 0.9 * cos(w + 0.5 * sin(w * 1));
+    v *= exp(-t * 5);
+    v = 128 + round(127 * v); // normalize values
+    samples[i] = v;
+}
+    </textarea>
+    <a id="updateFormula" href="#">Update</a> /
+    <a id="resetFormula" href="#">Reset</a>
+    <textarea id="errorMessage" rows="5" cols="50" readonly>
+    </textarea>
+</div>
+</div>
+</body>
+</html>
