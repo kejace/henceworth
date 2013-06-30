@@ -1,6 +1,9 @@
 ---
 title: Untersuchungen über die radioaktiven Substanzen
 date: 1904-01-01
+author: marie curie
+description: bla bla
+tags: tag1, tag2
 ---
 
 ## Einleitung.

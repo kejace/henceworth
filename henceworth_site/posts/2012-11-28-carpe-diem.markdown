@@ -1,8 +1,12 @@
 ---
 title: Carpe Diem
 date: 2012-01-01
+author: some guy
+description: bla bla
+tags: tag1, tag3
 ---
 
+# Section 1
 Fusce tortor quam, egestas in posuere quis, porttitor vel turpis. Donec
 vulputate porttitor augue at rhoncus. Proin iaculis consectetur sagittis.
 Curabitur venenatis turpis sit amet purus tristique nec posuere risus laoreet.
@@ -10,6 +14,7 @@ Nullam nisi sem, dapibus id semper id, egestas vel arcu. Morbi porttitor ipsum
 placerat erat consequat sed consequat purus feugiat. Donec auctor elit ut risus
 mattis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+# Section 2
 Proin vulputate sapien facilisis leo ornare pulvinar. Fusce tempus massa a risus
 semper iaculis. Suspendisse sollicitudin posuere nunc, sit amet rutrum leo
 facilisis mattis. Sed ornare auctor dui, vitae rutrum neque auctor sit amet.
@@ -32,13 +37,16 @@ Aliquam nibh felis, congue molestie blandit at, bibendum at eros. Aenean
 tincidunt, tortor iaculis placerat sollicitudin, lorem justo tempor diam, et
 posuere sapien leo et magna. Quisque vel aliquam mauris.
 
+#Section 3
 Proin varius tempus fermentum. Cum sociis natoque penatibus et magnis dis
 parturient montes, nascetur ridiculus mus. Sed tincidunt nunc id magna
 adipiscing non sollicitudin turpis tempor. Etiam vel elit ipsum, quis euismod
 velit. Quisque elementum magna vitae quam venenatis lacinia. Sed at arcu ipsum.
 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
 himenaeos. Donec ut lorem ac sapien cursus lacinia sit amet mollis dolor.
-Vivamus tempus odio nec magna faucibus sed hendrerit lorem tempor.
+Vivamus tempus odio nec magna faucibus sed hendrerit lorem tempor.[ˆ1]
+
+[ˆ1]: Hello footnote!
 
 Vestibulum eu nisi arcu. Curabitur nisi risus, fermentum ut lacinia ut, interdum
 nec magna. Nunc aliquet gravida massa, eu aliquam lorem faucibus at. Sed
